@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:letterku/login_screen.dart';
+//import '../../../Downloads/backup/age_select.dart';
+//import '../../../Downloads/backup/gender_select.dart';
+import 'package:letterku/views/gender_select_view.dart';
+import 'package:letterku/models/gender_select_model.dart';
+import 'package:letterku/controller/gender_select_controller.dart';
 
 class RegisterPage extends StatelessWidget {
 
@@ -83,7 +88,7 @@ class RegisterPage extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> GenderSelectView(GenderSelectController(GenderSelectModel()) , GenderSelectModel())));
           },
           child: Text(
             'REGISTER',
